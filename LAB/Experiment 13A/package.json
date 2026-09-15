@@ -1,0 +1,16 @@
+{
+  "name": "experiment-13a",
+  "version": "1.0.0",
+  "description": "Express + Mongoose User Management Tutorial",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "mongoose": "^8.3.1"
+  }
+}
