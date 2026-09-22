@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Add New Note</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="header">
+            <div>
+                <h1>📝 Add New Note</h1>
+                <p>Create a new note and keep it organized</p>
+            </div>
+
+            <a href="/" class="add-btn">
+                ← Back to Notes
+            </a>
+        </div>
+
+        <form action="/notes" method="POST" class="note-form">
+
+            <label>Title</label>
+            <input
+                type="text"
+                name="title"
+                placeholder="Enter note title"
+                required
+            >
+
+            <label>Content</label>
+            <textarea
+                name="content"
+                placeholder="Write your note here..."
+                required
+            ></textarea>
+
+            <label>Category</label>
+            <input
+                type="text"
+                name="category"
+                placeholder="e.g. College, Personal, Work"
+            >
+
+            <button type="submit" class="submit-btn">
+                + Add Note
+            </button>
+
+        </form>
+
+        <footer>
+            <p>
+                <strong>Name:</strong> Anant Kumar
+                &nbsp; | &nbsp;
+                <strong>SAP ID:</strong> 590012056
+                &nbsp; | &nbsp;
+                <strong>Batch:</strong> 03
+            </p>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>

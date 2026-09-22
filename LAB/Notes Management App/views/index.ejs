@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Notes</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="header">
+            <div>
+                <h1>📝 My Notes</h1>
+                <p>Keep your thoughts organized</p>
+            </div>
+
+            <a href="/notes/new" class="add-btn">
+                + Add Note
+            </a>
+        </div>
+
+        <hr>
+
+        <% if (notes.length === 0) { %>
+
+            <div class="empty">
+                <h2>📭 No Notes Yet</h2>
+                <p>Start by creating your first note.</p>
+
+                <a href="/notes/new" class="add-btn">
+                    Create Your First Note
+                </a>
+            </div>
+
+        <% } %>
+
+
+        <div class="notes-grid">
+
+            <% notes.forEach(note => { %>
+
+                <div class="note-card">
+
+                    <div class="note-top">
+                        <h2><%= note.title %></h2>
+
+                        <span class="category">
+                            <%= note.category || "General" %>
+                        </span>
+                    </div>
+
+                    <p class="content">
+                        <%= note.content %>
+                    </p>
+
+                    <div class="note-footer">
+
+                        <span class="date">
+                            🕒 <%= new Date(note.createdAt).toLocaleString() %>
+                        </span>
+
+                        <form action="/notes/<%= note._id %>/delete" method="POST">
+                            <button type="submit" class="delete-btn">
+                                Delete
+                            </button>
+                        </form>
+
+                    </div>
+
+                </div>
+
+            <% }) %>
+
+        </div>
+
+        <footer>
+            <p>
+                <strong>Name:</strong> Anant Kumar
+                &nbsp; | &nbsp;
+                <strong>SAP ID:</strong> 590012056
+                &nbsp; | &nbsp;
+                <strong>Batch:</strong> 03
+            </p>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>
