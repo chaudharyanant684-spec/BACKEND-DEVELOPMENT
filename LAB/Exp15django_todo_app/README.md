@@ -239,3 +239,116 @@ After completing this experiment, the following concepts were practised:
 **Framework:** Django  
 **Database:** SQLite  
 **Status:** Successfully implemented and tested locally.
+
+
+
+## 12. Enhancements and Work Completed
+
+The existing Django To-Do Application was enhanced with additional administrative features, static file organization, JavaScript functionality, and improved user interface styling.
+
+### A. Django Admin Customization
+
+The `Task` model was registered in Django Admin and customized using `ModelAdmin`.
+
+The following features were configured:
+
+- `list_display`: Displays the task title, completion status, and creation date.
+- `list_filter`: Allows filtering tasks by completion status and creation date.
+- `search_fields`: Enables searching tasks by title.
+- `ordering`: Displays recently created tasks first.
+
+The Django Admin panel was opened and tested successfully.
+
+### B. Static Files Organization
+
+The static files were organized into separate directories to improve project maintainability.
+
+```text
+todo/
+└── static/
+    └── todo/
+        ├── css/
+        │   └── style.css
+        ├── js/
+        │   └── app.js
+        └── images/
+            └── logo.png
+```
+
+The CSS stylesheet was moved to `todo/static/todo/css/style.css`, and the static file path in `base.html` was updated accordingly.
+
+### C. JavaScript Integration
+
+A JavaScript file named `app.js` was created at `todo/static/todo/js/app.js`.
+
+The JavaScript functionality includes:
+
+- Detecting when the HTML document has loaded.
+- Displaying a confirmation message in the browser console.
+- Adding a hover interaction to task items.
+- Moving task items slightly to the right when the mouse enters.
+- Returning task items to their original position when the mouse leaves.
+
+The JavaScript file was connected through `base.html` using Django's static template tag and tested successfully in the browser.
+
+### D. Logo Integration
+
+A custom logo was created for the To-Do Application and saved as `logo.png` in the images directory.
+
+The logo was integrated into `header.html` using Django's static file system. CSS styling was added to align the logo and heading within the application header.
+
+### E. User Interface Improvements
+
+Additional CSS styling was implemented to improve the appearance of the task list.
+
+The improvements include:
+
+- White task cards with rounded corners.
+- Padding and spacing between task items.
+- Box shadows for visual depth.
+- Smooth hover transitions.
+- Styled task action links.
+- Different text styling for completed tasks.
+
+The application background was also configured with a light-blue colour, and the updated styling was tested in the browser.
+
+### F. Testing and Verification
+
+The following features were tested during development:
+
+1. Opening the To-Do Application in the browser.
+2. Adding tasks through the task creation page.
+3. Displaying tasks on the main page.
+4. Toggling task completion status.
+5. Deleting tasks.
+6. Accessing the Django Admin login page.
+7. Viewing and managing tasks through Django Admin.
+8. Searching and filtering tasks in Django Admin.
+9. Loading CSS, JavaScript, and the logo.
+10. Verifying the JavaScript hover effect on task items.
+
+The Django system check was also executed successfully during development.
+
+## 13. Updated Learning Outcomes
+
+After completing these enhancements, the following additional concepts were practised:
+
+- Customizing Django Admin using `ModelAdmin`.
+- Organizing CSS, JavaScript, and image files using Django's static file structure.
+- Integrating JavaScript with Django templates.
+- Implementing interactive hover effects.
+- Adding and styling a custom application logo.
+- Improving user interface design using CSS.
+- Testing application functionality through the browser and Django Admin.
+
+## 14. Final Status
+
+The Django To-Do Application was enhanced with administrative search and filtering, organized static assets, a custom logo, JavaScript hover interactions, and improved task-list styling.
+
+The application was tested locally in the Django development environment.
+
+**Project:** Django To-Do Application  
+**Experiment:** 15  
+**Framework:** Django  
+**Database:** SQLite  
+**Status:** Enhanced and tested locally.

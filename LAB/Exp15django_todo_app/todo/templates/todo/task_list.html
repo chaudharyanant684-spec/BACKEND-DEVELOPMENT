@@ -1,4 +1,3 @@
-
 {% extends 'todo/base.html' %}
 
 {% block title %}My To-Do List{% endblock %}
@@ -11,7 +10,7 @@
 
 <ul>
     {% for task in tasks %}
-        <li>
+        <li class="task-item">
             {% if task.completed %}
                 <s>{{ task.title }}</s>
             {% else %}
