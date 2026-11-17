@@ -1,0 +1,19 @@
+
+services:
+  web:
+    image: nginx:alpine
+    container_name: compose-web
+    ports:
+      - "8082:80"
+    depends_on:
+      - redis
+
+  redis:
+    image: redis:alpine
+    container_name: compose-redis
+    command: ["redis-server", "--appendonly", "yes"]
+    volumes:
+      - redis-data:/data
+
+volumes:
+  redis-data:
